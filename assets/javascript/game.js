@@ -33,21 +33,21 @@ document.onkeyup = function(event) {
             computerGuess();
         }
         //if the user guess is not the computers guess, add user guess to guess choices array
-        if (userGuess != compGuess) {
+        else if (userGuess != compGuess) {
             numberGuess --;
             guessChoices.push(userGuess);
         }
         //if the user uses up the guesses, reset the game
-        if (numberGuess === 0) {
+        else if (numberGuess === 0) {
             numberGuess = 9;
             losses ++;
             guessChoices = [];
             computerGuess();
         }
     //change variables on the html document  
-    document.getElementById("wins").innerHTML = "Wins: " + wins + "";
-    document.getElementById("losses").innerHTML = "Losses: " + losses + "";
-    document.getElementById("guessesLeft").innerHTML = "Guesses left: " + numberGuess + "";
-    document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " +guessChoices.join (", ") + "";
+    document.getElementById('wins').innerHTML = 'Wins: ' + wins + '';
+    document.getElementById('losses').innerHTML = 'Losses: ' + losses + '';
+    document.getElementById('guessesLeft').innerHTML = 'Guesses left: ' + numberGuess + '';
+    document.getElementById('guessesSoFar').innerHTML = 'Your guesses so far: ' +guessChoices.join (', ') + '';
     }
 };
