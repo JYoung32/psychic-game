@@ -38,7 +38,7 @@ document.onkeyup = function(event) {
             guessChoices.push(userGuess);
         }
         //if the user uses up the guesses, reset the game
-        else if (numberGuess === 0) {
+        if (numberGuess === 0) {
             numberGuess = 9;
             losses ++;
             guessChoices = [];
