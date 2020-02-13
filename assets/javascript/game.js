@@ -24,19 +24,17 @@ document.onkeyup = (event) => {
     //if the user makes a guess run code, if false do nothing
     if (choices.indexOf(userGuess) != -1) {
 
-        //if the users guess is the computers guess, user wins
+        //if the users guess is the computers guess, user wins, else mark up lose
         (userGuess === compGuess) ? 
-        (
-            wins++,
-            numberGuess = 9,
-            guessChoices = [],
-            computerGuess()
-        ) :
-        //if the user guess is not the computers guess, add user guess to guess choices array
-        ( 
-            numberGuess --,
-            guessChoices.push(userGuess)
-        );
+            (
+                wins++,
+                numberGuess = 9,
+                guessChoices = [],
+                computerGuess()
+            ) : ( 
+                numberGuess --,
+                guessChoices.push(userGuess)
+            );
 
         //if the user uses up the guesses, reset the game
         if (numberGuess === 0) {
