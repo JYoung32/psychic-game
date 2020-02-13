@@ -1,2 +1,2 @@
-# psychic-game
-first basic javascript game
+# Psychic Word Guess Game
+A basic JavaScript word guessing game. Click on any Key within the alphabet to get started and have fun!
