@@ -1,13 +1,10 @@
-//create a variable for the computer choice
+//create variables
 const choices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-//make variable for wins and losses
+
 let wins = 0;
 let losses = 0;
-//make variable for number of guesses
 let numberGuess = 9;
-//make variable string for guess choices
 let guessChoices = [];
-//have computer choose a random letter from the computerChoice variable
 let compGuess ;
 
 computerGuess = () => {
@@ -26,7 +23,7 @@ document.onkeyup = (event) => {
     //create if conditions for the game
     //if the user makes a guess run code, if false do nothing
     if (choices.indexOf(userGuess) != -1) {
-        
+
         //if the users guess is the computers guess, user wins
         (userGuess === compGuess) ? 
         (
